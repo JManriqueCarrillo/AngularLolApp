@@ -1,0 +1,7 @@
+{
+  "name": "LolDataProject",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
