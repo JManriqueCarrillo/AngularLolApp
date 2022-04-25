@@ -6,8 +6,8 @@
 
 <ion-content>
   <ion-list>
-    <div *ngFor="let champion of champions">
-      <app-champion-summary [champion] = champion></app-champion-summary>
+    <div *ngFor="let champion of champions" [routerLink]="['/champions', champion.id]">
+      <app-champion-summary [champion] = "champion"></app-champion-summary>
     </div>
   </ion-list>
 </ion-content>

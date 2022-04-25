@@ -13,8 +13,17 @@ const routes: Routes = [
   },
   {
     path: 'champions',
-    loadChildren: () => import('./champions/champions.module').then(m => m.ChampionsPageModule)
-  },
+    children: [
+      {
+        path: "",
+        loadChildren: () => import('./champions/champions.module').then(m => m.ChampionsPageModule)
+      },
+      {
+        path: ":championId",
+        loadChildren: () => import('./champions/detail/detail.module').then( m => m.DetailPageModule)
+      }
+    ]
+  }    
 ];
 
 @NgModule({
