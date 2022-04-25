@@ -1,9 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>detail</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/champions"></ion-back-button>
+    </ion-buttons>
+    <ion-title *ngIf="champion">{{champion.name}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div *ngIf="champion">
+    <ion-img [src]="getAvatarUrl(champion.id)"></ion-img>
+    <p>{{champion.title}}</p>
+    <p>{{champion.shortBio}}</p>
+  </div>
 
 </ion-content>

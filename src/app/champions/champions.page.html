@@ -3,7 +3,7 @@
     <ion-title>Champions</ion-title>
   </ion-toolbar>
 </ion-header>
-
+<mat-progress-spinner *ngIf="loadingService.isLoading$ | async"></mat-progress-spinner>
 <ion-content>
   <ion-list>
     <div *ngFor="let champion of champions" [routerLink]="['/champions', champion.id]">
